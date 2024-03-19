@@ -1,3 +1,12 @@
+import altair as alt
+import numpy as np
+import pandas as pd
+import streamlit as st
+
+"""
+# Welcome to VAA's Demo - Text to Video !
+"""
+
 import streamlit as st
 import torch
 from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
@@ -35,4 +44,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
