@@ -14,7 +14,8 @@ from diffusers.utils import export_to_video
 
 # Function to generate video and return its path
 def generate_video(prompt):
-    pipe = DiffusionPipeline.from_pretrained("cerspense/zeroscope_v2_576w", torch_dtype=torch.float16)
+    device = torch.device('cpu')
+    pipe = DiffusionPipeline.from_pretrained("cerspense/zeroscope_v2_576w", torch_dtype=torch.float16, device=device)
     pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
     pipe.enable_model_cpu_offload()
     
