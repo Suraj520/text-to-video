@@ -19,16 +19,18 @@ def main():
             "width": 1024,
             "height": 576,
             "prompt": prompt,
-            "guidance_scale": 10.5,
+            "guidance_scale": 20.0,
+            "negative_prompt": "very foggy"
         }
         
         # Generate video using replicate.run
         try:
-            output_data = replicate.run(
+            output = replicate.run(
                 "anotherjesse/zeroscope-v2-xl:9f747673945c62801b13b84701c783929c0ee784e4748ec062204894dda1a351",
                 input=input_data
             )
             video_url = output_data
+            st.write(video_url)
             st.write('Video generated!')
             
             # Display download button for the generated video
