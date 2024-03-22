@@ -5,7 +5,7 @@ replicate = Client(api_token="r8_bGbJmY2Z5OwhYL5ohi111dgupcARGQT0zAb3y")
 
 # Streamlit app
 def main():
-    st.title('# Welcome to VAA's Demo - Text to Video !')
+    st.title('Welcome to VAA's Demo - Text to Video !')
     
     # Input prompts
     prompt = st.text_area('Enter prompt', 'Two people talking about weather in a car')
