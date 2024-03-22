@@ -5,11 +5,10 @@ replicate = Client(api_token="r8_bGbJmY2Z5OwhYL5ohi111dgupcARGQT0zAb3y")
 
 # Streamlit app
 def main():
-    st.title('Video Generation with Diffusers')
+    st.title('# Welcome to VAA's Demo - Text to Video !')
     
     # Input prompts
     prompt = st.text_area('Enter prompt', 'Two people talking about weather in a car')
-    #negative_prompt = st.text_area('Enter negative prompt', 'very blue, dust, noisy, washed out, ugly, distorted, broken')
     
     # Button to generate video
     if st.button('Generate Video'):
@@ -19,8 +18,7 @@ def main():
             "width": 1024,
             "height": 576,
             "prompt": prompt,
-            "guidance_scale": 17.5,
-            #"negative_prompt": negative_prompt
+            "guidance_scale": 10.5,
         }
         
         # Generate video using replicate.run
