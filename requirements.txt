@@ -1,3 +1,4 @@
+replicate
 streamlit==1.5.0
 torch==2.1.0
 transformers==4.28
